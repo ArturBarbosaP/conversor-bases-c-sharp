@@ -7,9 +7,9 @@
             InitializeComponent();
         }
 
-        private void btn_converter_Click(object sender, EventArgs e)
+        private void btn_converter_decimal_Click(object sender, EventArgs e)
         {
-            if (rbt_binario.Checked) //decimal -> binario
+            if (rbt_binario_dec.Checked) //decimal -> binario
             {
                 int quoc = int.Parse(txt_decimal.Text); //quociente = numero passado pelo usuario
                 string resto = "";
@@ -26,7 +26,7 @@
                 txt_resultado.Text = resto; //resultado final é o resto final
                 txt_passo.Text = passo;
             }
-            else if (rbt_hexa.Checked) //decimal -> hexa
+            else if (rbt_hexa_dec.Checked) //decimal -> hexa
             {
                 int quoc = int.Parse(txt_decimal.Text); //quociente = numero passado pelo usuario
                 string resto = "";
