@@ -111,7 +111,7 @@
             {
                 string binario = txt_binario.Text; //binario passado pelo usuario
                 int resultado = 0;
-                string passo = $"({binario}){(char)('₀' + 1)}{(char)('₀' + 0)} = "; //inicio do passo a passo
+                string passo = $"({binario}){(char)('₀' + 2)} = "; //inicio do passo a passo
 
                 for (int i = 0; i < binario.Length; i++) //para cada bit do binário
                 {
@@ -124,8 +124,80 @@
                 txt_passo.Text = passo;
             }
             else if (rbt_hexa_bin.Checked) //binario -> hexa
-            { 
+            {
+                string binario = txt_binario.Text; //binario passado pelo usuario
+                string sub; //string para a divisão do binário em 4 bits
+                int num; //numero retornado da conversão do binário para decimal
+                string resultado = ""; //resultado em hexadecimal
+                string passo = $"({binario}){(char)('₀' + 2)} = "; //inicio do passo a passo
 
+                if (binario.Length % 4 != 0) //se nao for possivel dividir o binario em 4 bits, completar com 0 a esquerda
+                {
+                    int qtd = 4 - (binario.Length % 4);
+
+                    for (int i = 0; i < qtd; i++)
+                        binario = binario.Insert(0, "0");
+
+                    passo += $"({binario}){(char)('₀' + 2)}. "; //mostrando no passo a passo o binario completado
+                }
+
+                for (int i = 0; i < binario.Length; i += 4)
+                {
+                    sub = binario.Substring(i, 4); //string binaria dividida em 4
+                    num = 0;
+
+                    passo += $"({sub}){(char)('₀' + 2)} = ";
+
+                    for (int j = 0; j < sub.Length; j++)
+                    {
+                        num += int.Parse(sub[j].ToString()) * (int)Math.Pow(2, sub.Length - 1 - j); //convertendo cada bit do binario dividido para hexadecimal
+                    }
+
+                    if (num >= 10) //se o numero convertido for maior que 10, alterar pela letra correspondente em hexadecimal
+                    {
+                        switch (num)
+                        {
+                            case 10:
+                                resultado += "A";
+                                passo += $"({num}){(char)('₀' + 1)}{(char)('₀' + 6)} = (A){(char)('₀' + 1)}{(char)('₀' + 6)}"; //mostrando a letra convertida do binario dividido
+                                break;
+
+                            case 11:
+                                resultado += "B";
+                                passo += $"({num}){(char)('₀' + 1)}{(char)('₀' + 6)} = (B){(char)('₀' + 1)}{(char)('₀' + 6)}"; //mostrando a letra convertida do binario dividido
+                                break;
+
+                            case 12:
+                                resultado += "C";
+                                passo += $"({num}){(char)('₀' + 1)}{(char)('₀' + 6)} = (C){(char)('₀' + 1)}{(char)('₀' + 6)}"; //mostrando a letra convertida do binario dividido
+                                break;
+
+                            case 13:
+                                resultado += "D";
+                                passo += $"({num}){(char)('₀' + 1)}{(char)('₀' + 6)} = (D){(char)('₀' + 1)}{(char)('₀' + 6)}"; //mostrando a letra convertida do binario dividido
+                                break;
+
+                            case 14:
+                                resultado += "E";
+                                passo += $"({num}){(char)('₀' + 1)}{(char)('₀' + 6)} = (E){(char)('₀' + 1)}{(char)('₀' + 6)}"; //mostrando a letra convertida do binario dividido
+                                break;
+
+                            case 15:
+                                resultado += "F";
+                                passo += $"({num}){(char)('₀' + 1)}{(char)('₀' + 6)} = (F){(char)('₀' + 1)}{(char)('₀' + 6)}"; //mostrando a letra convertida do binario dividido
+                                break;
+                        }
+                    }
+                    else
+                    {
+                        resultado += num.ToString(); //adicionando o número convertido ao resultado final
+                        passo += $"({num}){(char)('₀' + 1)}{(char)('₀' + 6)}. "; //mostrando o numero convertido do binario dividido
+                    }
+                }
+
+                passo += $"= ({resultado}){(char)('₀' + 1)}{(char)('₀' + 6)}";
+                txt_resultado.Text = resultado;
+                txt_passo.Text = passo;
             }
         }
     }
