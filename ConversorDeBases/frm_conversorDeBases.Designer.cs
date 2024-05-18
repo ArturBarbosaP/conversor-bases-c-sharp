@@ -32,6 +32,7 @@
             rbt_binario = new RadioButton();
             txt_decimal = new TextBox();
             btn_converter = new Button();
+            txt_passo = new TextBox();
             txt_resultado = new TextBox();
             SuspendLayout();
             // 
@@ -75,14 +76,22 @@
             btn_converter.UseVisualStyleBackColor = true;
             btn_converter.Click += btn_converter_Click;
             // 
+            // txt_passo
+            // 
+            txt_passo.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txt_passo.Location = new Point(6, 399);
+            txt_passo.Name = "txt_passo";
+            txt_passo.ReadOnly = true;
+            txt_passo.Size = new Size(789, 39);
+            txt_passo.TabIndex = 9;
+            // 
             // txt_resultado
             // 
-            txt_resultado.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txt_resultado.Location = new Point(6, 399);
+            txt_resultado.Location = new Point(328, 75);
             txt_resultado.Name = "txt_resultado";
             txt_resultado.ReadOnly = true;
-            txt_resultado.Size = new Size(789, 39);
-            txt_resultado.TabIndex = 9;
+            txt_resultado.Size = new Size(212, 23);
+            txt_resultado.TabIndex = 10;
             // 
             // frm_conversorDeBases
             // 
@@ -90,6 +99,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(txt_resultado);
+            Controls.Add(txt_passo);
             Controls.Add(btn_converter);
             Controls.Add(rbt_hexa);
             Controls.Add(rbt_binario);
@@ -107,6 +117,7 @@
         private RadioButton rbt_binario;
         private TextBox txt_decimal;
         private Button btn_converter;
+        private TextBox txt_passo;
         private TextBox txt_resultado;
     }
 }
