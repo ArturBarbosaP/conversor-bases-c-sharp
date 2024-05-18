@@ -40,8 +40,14 @@
             panel_binario = new Panel();
             rbt_hexa_bin = new RadioButton();
             btn_converter_binario = new Button();
+            panel_hexa = new Panel();
+            rbt_binario_hexa = new RadioButton();
+            rbt_decimal_hexa = new RadioButton();
+            txt_hexa = new TextBox();
+            btn_converter_hexa = new Button();
             panel_decimal.SuspendLayout();
             panel_binario.SuspendLayout();
+            panel_hexa.SuspendLayout();
             SuspendLayout();
             // 
             // rbt_hexa_dec
@@ -159,11 +165,62 @@
             btn_converter_binario.UseVisualStyleBackColor = true;
             btn_converter_binario.Click += btn_converter_binario_Click;
             // 
+            // panel_hexa
+            // 
+            panel_hexa.Controls.Add(rbt_binario_hexa);
+            panel_hexa.Controls.Add(rbt_decimal_hexa);
+            panel_hexa.Location = new Point(23, 278);
+            panel_hexa.Name = "panel_hexa";
+            panel_hexa.Size = new Size(212, 39);
+            panel_hexa.TabIndex = 16;
+            // 
+            // rbt_binario_hexa
+            // 
+            rbt_binario_hexa.AutoSize = true;
+            rbt_binario_hexa.Location = new Point(135, 10);
+            rbt_binario_hexa.Name = "rbt_binario_hexa";
+            rbt_binario_hexa.Size = new Size(62, 19);
+            rbt_binario_hexa.TabIndex = 18;
+            rbt_binario_hexa.Text = "Binário";
+            rbt_binario_hexa.UseVisualStyleBackColor = true;
+            // 
+            // rbt_decimal_hexa
+            // 
+            rbt_decimal_hexa.AutoSize = true;
+            rbt_decimal_hexa.Checked = true;
+            rbt_decimal_hexa.Location = new Point(16, 10);
+            rbt_decimal_hexa.Name = "rbt_decimal_hexa";
+            rbt_decimal_hexa.Size = new Size(68, 19);
+            rbt_decimal_hexa.TabIndex = 17;
+            rbt_decimal_hexa.TabStop = true;
+            rbt_decimal_hexa.Text = "Decimal";
+            rbt_decimal_hexa.UseVisualStyleBackColor = true;
+            // 
+            // txt_hexa
+            // 
+            txt_hexa.Location = new Point(23, 323);
+            txt_hexa.Name = "txt_hexa";
+            txt_hexa.PlaceholderText = "Base Hexadecimal";
+            txt_hexa.Size = new Size(212, 23);
+            txt_hexa.TabIndex = 17;
+            // 
+            // btn_converter_hexa
+            // 
+            btn_converter_hexa.Location = new Point(23, 352);
+            btn_converter_hexa.Name = "btn_converter_hexa";
+            btn_converter_hexa.Size = new Size(212, 26);
+            btn_converter_hexa.TabIndex = 18;
+            btn_converter_hexa.Text = "Converter";
+            btn_converter_hexa.UseVisualStyleBackColor = true;
+            // 
             // frm_conversorDeBases
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btn_converter_hexa);
+            Controls.Add(txt_hexa);
+            Controls.Add(panel_hexa);
             Controls.Add(btn_converter_binario);
             Controls.Add(panel_binario);
             Controls.Add(panel_decimal);
@@ -179,6 +236,8 @@
             panel_decimal.PerformLayout();
             panel_binario.ResumeLayout(false);
             panel_binario.PerformLayout();
+            panel_hexa.ResumeLayout(false);
+            panel_hexa.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -197,5 +256,10 @@
         private Panel panel_binario;
         private RadioButton rbt_hexa_bin;
         private Button btn_converter_binario;
+        private Panel panel_hexa;
+        private RadioButton rbt_binario_hexa;
+        private RadioButton rbt_decimal_hexa;
+        private TextBox txt_hexa;
+        private Button btn_converter_hexa;
     }
 }
