@@ -195,7 +195,8 @@
                     }
                 }
 
-                passo += $"= ({resultado}){(char)('₀' + 1)}{(char)('₀' + 6)}";
+                passo += $"= ({resultado}){(char)('₀' + 1)}{(char)('₀' + 6)}"; //fim do passo a passo
+
                 txt_resultado.Text = resultado;
                 txt_passo.Text = passo;
             }
@@ -257,7 +258,64 @@
             }
             else if (rbt_binario_hexa.Checked) //hexa -> binario
             {
+                string hexa = txt_hexa.Text; //hexadecimal passado pelo usuario
+                string resultado = ""; //resultado final
+                string passo = $"({hexa}){(char)('₀' + 1)}{(char)('₀' + 6)} = "; //inicio do passo a passo
 
+                for (int i = 0; i < hexa.Length; i++) //para cada bit em hexadecimal
+                {
+                    switch (hexa[i]) //se o bit em hexa seja uma letra, resultado sera o binario correspondente a letra
+                    {
+                        case 'A':
+                            resultado += "1010"; //10 em binario
+                            passo += $"({hexa[i]}){(char)('₀' + 1)}{(char)('₀' + 6)} = (1010){(char)('₀' + 2)}. "; //mostrando no passo a passo a conversão de cada bit para binario
+                            break;
+
+                        case 'B':
+                            resultado += "1011"; //11 em binario
+                            passo += $"({hexa[i]}){(char)('₀' + 1)}{(char)('₀' + 6)} = (1011){(char)('₀' + 2)}. ";
+                            break;
+
+                        case 'C':
+                            resultado += "1100"; //12 em binario
+                            passo += $"({hexa[i]}){(char)('₀' + 1)}{(char)('₀' + 6)} = (1100){(char)('₀' + 2)}. ";
+                            break;
+
+                        case 'D':
+                            resultado += "1101"; //13 em binario
+                            passo += $"({hexa[i]}){(char)('₀' + 1)}{(char)('₀' + 6)} = (1101){(char)('₀' + 2)}. ";
+                            break;
+
+                        case 'E':
+                            resultado += "1110"; //14 em binario
+                            passo += $"({hexa[i]}){(char)('₀' + 1)}{(char)('₀' + 6)} = (1110){(char)('₀' + 2)}. ";
+                            break;
+
+                        case 'F':
+                            resultado += "1111"; //15 em binario
+                            passo += $"({hexa[i]}){(char)('₀' + 1)}{(char)('₀' + 6)} = (1111){(char)('₀' + 2)}. ";
+                            break;
+
+                        default:
+                            //convertendo de hexa para binario
+                            int quoc = int.Parse(hexa[i].ToString());
+                            string resto = "";
+
+                            while (quoc != 0)
+                            {
+                                resto = resto.Insert(0, (quoc % 2).ToString());//inserir sempre na frente
+                                quoc /= 2;
+                            }
+
+                            resultado += resto; //adicionando a conversão no resultado
+                            passo += $"({hexa[i]}){(char)('₀' + 1)}{(char)('₀' + 6)} = ({resto}){(char)('₀' + 2)}. "; //mostrando no passo a passo a conversão de cada bit para binario
+                            break;
+                    }
+                }
+
+                passo += $"({resultado}){(char)('₀' + 2)}"; //fim do passo a passo
+                txt_resultado.Text = resultado;
+                txt_passo.Text = passo;
             }
         }
     }
