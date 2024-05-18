@@ -31,9 +31,9 @@
             btn_somar = new Button();
             txt_num1 = new TextBox();
             panel_rbts = new Panel();
+            rbt_hexa = new RadioButton();
             rbt_binario = new RadioButton();
             rbt_decimal = new RadioButton();
-            rbt_hexa = new RadioButton();
             txt_num2 = new TextBox();
             btn_sub = new Button();
             btn_multi = new Button();
@@ -50,6 +50,7 @@
             btn_somar.TabIndex = 21;
             btn_somar.Text = "Somar";
             btn_somar.UseVisualStyleBackColor = true;
+            btn_somar.Click += btn_somar_Click;
             // 
             // txt_num1
             // 
@@ -68,6 +69,16 @@
             panel_rbts.Name = "panel_rbts";
             panel_rbts.Size = new Size(349, 39);
             panel_rbts.TabIndex = 19;
+            // 
+            // rbt_hexa
+            // 
+            rbt_hexa.AutoSize = true;
+            rbt_hexa.Location = new Point(239, 10);
+            rbt_hexa.Name = "rbt_hexa";
+            rbt_hexa.Size = new Size(94, 19);
+            rbt_hexa.TabIndex = 22;
+            rbt_hexa.Text = "Hexadecimal";
+            rbt_hexa.UseVisualStyleBackColor = true;
             // 
             // rbt_binario
             // 
@@ -91,16 +102,6 @@
             rbt_decimal.Text = "Decimal";
             rbt_decimal.UseVisualStyleBackColor = true;
             // 
-            // rbt_hexa
-            // 
-            rbt_hexa.AutoSize = true;
-            rbt_hexa.Location = new Point(239, 10);
-            rbt_hexa.Name = "rbt_hexa";
-            rbt_hexa.Size = new Size(94, 19);
-            rbt_hexa.TabIndex = 22;
-            rbt_hexa.Text = "Hexadecimal";
-            rbt_hexa.UseVisualStyleBackColor = true;
-            // 
             // txt_num2
             // 
             txt_num2.Location = new Point(27, 197);
@@ -117,6 +118,7 @@
             btn_sub.TabIndex = 23;
             btn_sub.Text = "Subtrair";
             btn_sub.UseVisualStyleBackColor = true;
+            btn_sub.Click += btn_sub_Click;
             // 
             // btn_multi
             // 
@@ -126,6 +128,7 @@
             btn_multi.TabIndex = 24;
             btn_multi.Text = "Multiplicar";
             btn_multi.UseVisualStyleBackColor = true;
+            btn_multi.Click += btn_multi_Click;
             // 
             // txt_resultado
             // 
@@ -143,6 +146,7 @@
             btn_voltar.TabIndex = 26;
             btn_voltar.Text = "Voltar";
             btn_voltar.UseVisualStyleBackColor = true;
+            btn_voltar.Click += btn_voltar_Click;
             // 
             // frm_calculadoraDeBases
             // 
