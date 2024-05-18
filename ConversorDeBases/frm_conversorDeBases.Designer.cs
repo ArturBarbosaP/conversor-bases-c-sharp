@@ -47,11 +47,11 @@
             // rbt_hexa_dec
             // 
             rbt_hexa_dec.AutoSize = true;
-            rbt_hexa_dec.Location = new Point(99, 10);
+            rbt_hexa_dec.Location = new Point(107, 10);
             rbt_hexa_dec.Name = "rbt_hexa_dec";
-            rbt_hexa_dec.Size = new Size(101, 19);
+            rbt_hexa_dec.Size = new Size(94, 19);
             rbt_hexa_dec.TabIndex = 7;
-            rbt_hexa_dec.Text = "Hexadecimnal";
+            rbt_hexa_dec.Text = "Hexadecimal";
             rbt_hexa_dec.UseVisualStyleBackColor = true;
             // 
             // rbt_binario_dec
@@ -95,7 +95,7 @@
             // 
             // txt_resultado
             // 
-            txt_resultado.Location = new Point(328, 75);
+            txt_resultado.Location = new Point(398, 214);
             txt_resultado.Name = "txt_resultado";
             txt_resultado.ReadOnly = true;
             txt_resultado.Size = new Size(212, 23);
@@ -142,11 +142,11 @@
             // rbt_hexa_bin
             // 
             rbt_hexa_bin.AutoSize = true;
-            rbt_hexa_bin.Location = new Point(98, 10);
+            rbt_hexa_bin.Location = new Point(106, 10);
             rbt_hexa_bin.Name = "rbt_hexa_bin";
-            rbt_hexa_bin.Size = new Size(101, 19);
+            rbt_hexa_bin.Size = new Size(94, 19);
             rbt_hexa_bin.TabIndex = 8;
-            rbt_hexa_bin.Text = "Hexadecimnal";
+            rbt_hexa_bin.Text = "Hexadecimal";
             rbt_hexa_bin.UseVisualStyleBackColor = true;
             // 
             // btn_converter_binario
@@ -157,6 +157,7 @@
             btn_converter_binario.TabIndex = 15;
             btn_converter_binario.Text = "Converter";
             btn_converter_binario.UseVisualStyleBackColor = true;
+            btn_converter_binario.Click += btn_converter_binario_Click;
             // 
             // frm_conversorDeBases
             // 
