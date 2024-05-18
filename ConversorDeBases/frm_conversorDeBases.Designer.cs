@@ -74,7 +74,7 @@
             // 
             // txt_decimal
             // 
-            txt_decimal.Location = new Point(23, 75);
+            txt_decimal.Location = new Point(26, 96);
             txt_decimal.Name = "txt_decimal";
             txt_decimal.PlaceholderText = "Base Decimal";
             txt_decimal.Size = new Size(212, 23);
@@ -82,7 +82,7 @@
             // 
             // btn_converter_decimal
             // 
-            btn_converter_decimal.Location = new Point(23, 104);
+            btn_converter_decimal.Location = new Point(26, 125);
             btn_converter_decimal.Name = "btn_converter_decimal";
             btn_converter_decimal.Size = new Size(212, 26);
             btn_converter_decimal.TabIndex = 8;
@@ -93,18 +93,19 @@
             // txt_passo
             // 
             txt_passo.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txt_passo.Location = new Point(6, 399);
+            txt_passo.Location = new Point(335, 96);
+            txt_passo.Multiline = true;
             txt_passo.Name = "txt_passo";
             txt_passo.ReadOnly = true;
-            txt_passo.Size = new Size(789, 39);
+            txt_passo.Size = new Size(439, 303);
             txt_passo.TabIndex = 9;
             // 
             // txt_resultado
             // 
-            txt_resultado.Location = new Point(398, 214);
+            txt_resultado.Location = new Point(335, 51);
             txt_resultado.Name = "txt_resultado";
             txt_resultado.ReadOnly = true;
-            txt_resultado.Size = new Size(212, 23);
+            txt_resultado.Size = new Size(439, 23);
             txt_resultado.TabIndex = 10;
             // 
             // rbt_decimal_bin
@@ -121,7 +122,7 @@
             // 
             // txt_binario
             // 
-            txt_binario.Location = new Point(23, 199);
+            txt_binario.Location = new Point(26, 220);
             txt_binario.Name = "txt_binario";
             txt_binario.PlaceholderText = "Base Binária";
             txt_binario.Size = new Size(212, 23);
@@ -131,7 +132,7 @@
             // 
             panel_decimal.Controls.Add(rbt_binario_dec);
             panel_decimal.Controls.Add(rbt_hexa_dec);
-            panel_decimal.Location = new Point(23, 30);
+            panel_decimal.Location = new Point(26, 51);
             panel_decimal.Name = "panel_decimal";
             panel_decimal.Size = new Size(212, 39);
             panel_decimal.TabIndex = 13;
@@ -140,7 +141,7 @@
             // 
             panel_binario.Controls.Add(rbt_hexa_bin);
             panel_binario.Controls.Add(rbt_decimal_bin);
-            panel_binario.Location = new Point(23, 154);
+            panel_binario.Location = new Point(26, 175);
             panel_binario.Name = "panel_binario";
             panel_binario.Size = new Size(212, 39);
             panel_binario.TabIndex = 14;
@@ -157,7 +158,7 @@
             // 
             // btn_converter_binario
             // 
-            btn_converter_binario.Location = new Point(23, 228);
+            btn_converter_binario.Location = new Point(26, 249);
             btn_converter_binario.Name = "btn_converter_binario";
             btn_converter_binario.Size = new Size(212, 26);
             btn_converter_binario.TabIndex = 15;
@@ -169,7 +170,7 @@
             // 
             panel_hexa.Controls.Add(rbt_binario_hexa);
             panel_hexa.Controls.Add(rbt_decimal_hexa);
-            panel_hexa.Location = new Point(23, 278);
+            panel_hexa.Location = new Point(26, 299);
             panel_hexa.Name = "panel_hexa";
             panel_hexa.Size = new Size(212, 39);
             panel_hexa.TabIndex = 16;
@@ -198,7 +199,7 @@
             // 
             // txt_hexa
             // 
-            txt_hexa.Location = new Point(23, 323);
+            txt_hexa.Location = new Point(26, 344);
             txt_hexa.Name = "txt_hexa";
             txt_hexa.PlaceholderText = "Base Hexadecimal";
             txt_hexa.Size = new Size(212, 23);
@@ -206,7 +207,7 @@
             // 
             // btn_converter_hexa
             // 
-            btn_converter_hexa.Location = new Point(23, 352);
+            btn_converter_hexa.Location = new Point(26, 373);
             btn_converter_hexa.Name = "btn_converter_hexa";
             btn_converter_hexa.Size = new Size(212, 26);
             btn_converter_hexa.TabIndex = 18;
