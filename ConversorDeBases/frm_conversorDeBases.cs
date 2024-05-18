@@ -318,5 +318,11 @@
                 txt_passo.Text = passo;
             }
         }
+
+        private void btn_calculadora_Click(object sender, EventArgs e)
+        {
+            frm_calculadoraDeBases frm_calculadoraBases = new frm_calculadoraDeBases();
+            frm_calculadoraBases.ShowDialog();
+        }
     }
 }
