@@ -28,34 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            radioButton1310 = new RadioButton();
-            rbt_binario1581 = new RadioButton();
+            rbt_hexa = new RadioButton();
+            rbt_binario = new RadioButton();
             txt_decimal = new TextBox();
             btn_converter = new Button();
             txt_resultado = new TextBox();
             SuspendLayout();
             // 
-            // radioButton1310
+            // rbt_hexa
             // 
-            radioButton1310.AutoSize = true;
-            radioButton1310.Location = new Point(134, 25);
-            radioButton1310.Name = "radioButton1310";
-            radioButton1310.Size = new Size(101, 19);
-            radioButton1310.TabIndex = 7;
-            radioButton1310.Text = "Hexadecimnal";
-            radioButton1310.UseVisualStyleBackColor = true;
+            rbt_hexa.AutoSize = true;
+            rbt_hexa.Location = new Point(134, 25);
+            rbt_hexa.Name = "rbt_hexa";
+            rbt_hexa.Size = new Size(101, 19);
+            rbt_hexa.TabIndex = 7;
+            rbt_hexa.Text = "Hexadecimnal";
+            rbt_hexa.UseVisualStyleBackColor = true;
             // 
-            // rbt_binario1581
+            // rbt_binario
             // 
-            rbt_binario1581.AutoSize = true;
-            rbt_binario1581.Checked = true;
-            rbt_binario1581.Location = new Point(23, 25);
-            rbt_binario1581.Name = "rbt_binario1581";
-            rbt_binario1581.Size = new Size(62, 19);
-            rbt_binario1581.TabIndex = 6;
-            rbt_binario1581.TabStop = true;
-            rbt_binario1581.Text = "Binário";
-            rbt_binario1581.UseVisualStyleBackColor = true;
+            rbt_binario.AutoSize = true;
+            rbt_binario.Checked = true;
+            rbt_binario.Location = new Point(23, 25);
+            rbt_binario.Name = "rbt_binario";
+            rbt_binario.Size = new Size(62, 19);
+            rbt_binario.TabIndex = 6;
+            rbt_binario.TabStop = true;
+            rbt_binario.Text = "Binário";
+            rbt_binario.UseVisualStyleBackColor = true;
             // 
             // txt_decimal
             // 
@@ -67,20 +67,21 @@
             // 
             // btn_converter
             // 
-            btn_converter.Location = new Point(23, 130);
+            btn_converter.Location = new Point(23, 123);
             btn_converter.Name = "btn_converter";
             btn_converter.Size = new Size(212, 26);
             btn_converter.TabIndex = 8;
             btn_converter.Text = "Converter";
             btn_converter.UseVisualStyleBackColor = true;
+            btn_converter.Click += btn_converter_Click;
             // 
             // txt_resultado
             // 
             txt_resultado.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txt_resultado.Location = new Point(168, 371);
+            txt_resultado.Location = new Point(6, 399);
             txt_resultado.Name = "txt_resultado";
             txt_resultado.ReadOnly = true;
-            txt_resultado.Size = new Size(464, 39);
+            txt_resultado.Size = new Size(789, 39);
             txt_resultado.TabIndex = 9;
             // 
             // frm_conversorDeBases
@@ -90,8 +91,8 @@
             ClientSize = new Size(800, 450);
             Controls.Add(txt_resultado);
             Controls.Add(btn_converter);
-            Controls.Add(radioButton1310);
-            Controls.Add(rbt_binario1581);
+            Controls.Add(rbt_hexa);
+            Controls.Add(rbt_binario);
             Controls.Add(txt_decimal);
             Name = "frm_conversorDeBases";
             StartPosition = FormStartPosition.CenterScreen;
@@ -102,8 +103,8 @@
 
         #endregion
 
-        private RadioButton radioButton1310;
-        private RadioButton rbt_binario1581;
+        private RadioButton rbt_hexa;
+        private RadioButton rbt_binario;
         private TextBox txt_decimal;
         private Button btn_converter;
         private TextBox txt_resultado;
