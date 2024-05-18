@@ -44,7 +44,7 @@
             // 
             // btn_somar
             // 
-            btn_somar.Location = new Point(27, 237);
+            btn_somar.Location = new Point(27, 192);
             btn_somar.Name = "btn_somar";
             btn_somar.Size = new Size(349, 26);
             btn_somar.TabIndex = 21;
@@ -54,7 +54,7 @@
             // 
             // txt_num1
             // 
-            txt_num1.Location = new Point(27, 168);
+            txt_num1.Location = new Point(27, 123);
             txt_num1.Name = "txt_num1";
             txt_num1.PlaceholderText = "Número 1";
             txt_num1.Size = new Size(349, 23);
@@ -65,7 +65,7 @@
             panel_rbts.Controls.Add(rbt_hexa);
             panel_rbts.Controls.Add(rbt_binario);
             panel_rbts.Controls.Add(rbt_decimal);
-            panel_rbts.Location = new Point(27, 123);
+            panel_rbts.Location = new Point(27, 78);
             panel_rbts.Name = "panel_rbts";
             panel_rbts.Size = new Size(349, 39);
             panel_rbts.TabIndex = 19;
@@ -104,7 +104,7 @@
             // 
             // txt_num2
             // 
-            txt_num2.Location = new Point(27, 197);
+            txt_num2.Location = new Point(27, 152);
             txt_num2.Name = "txt_num2";
             txt_num2.PlaceholderText = "Número 2";
             txt_num2.Size = new Size(349, 23);
@@ -112,7 +112,7 @@
             // 
             // btn_sub
             // 
-            btn_sub.Location = new Point(27, 269);
+            btn_sub.Location = new Point(27, 224);
             btn_sub.Name = "btn_sub";
             btn_sub.Size = new Size(349, 26);
             btn_sub.TabIndex = 23;
@@ -122,7 +122,7 @@
             // 
             // btn_multi
             // 
-            btn_multi.Location = new Point(27, 301);
+            btn_multi.Location = new Point(27, 256);
             btn_multi.Name = "btn_multi";
             btn_multi.Size = new Size(349, 26);
             btn_multi.TabIndex = 24;
@@ -132,7 +132,7 @@
             // 
             // txt_resultado
             // 
-            txt_resultado.Location = new Point(424, 197);
+            txt_resultado.Location = new Point(424, 152);
             txt_resultado.Name = "txt_resultado";
             txt_resultado.ReadOnly = true;
             txt_resultado.Size = new Size(349, 23);
@@ -140,7 +140,7 @@
             // 
             // btn_voltar
             // 
-            btn_voltar.Location = new Point(27, 391);
+            btn_voltar.Location = new Point(27, 346);
             btn_voltar.Name = "btn_voltar";
             btn_voltar.Size = new Size(349, 26);
             btn_voltar.TabIndex = 26;
