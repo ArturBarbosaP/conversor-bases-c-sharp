@@ -212,6 +212,7 @@
             btn_converter_hexa.TabIndex = 18;
             btn_converter_hexa.Text = "Converter";
             btn_converter_hexa.UseVisualStyleBackColor = true;
+            btn_converter_hexa.Click += btn_converter_hexa_Click;
             // 
             // frm_conversorDeBases
             // 

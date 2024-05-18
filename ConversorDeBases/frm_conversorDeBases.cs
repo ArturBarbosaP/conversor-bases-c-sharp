@@ -159,32 +159,32 @@
                         {
                             case 10:
                                 resultado += "A";
-                                passo += $"({num}){(char)('₀' + 1)}{(char)('₀' + 6)} = (A){(char)('₀' + 1)}{(char)('₀' + 6)}"; //mostrando a letra convertida do binario dividido
+                                passo += $"({num}){(char)('₀' + 1)}{(char)('₀' + 6)} = (A){(char)('₀' + 1)}{(char)('₀' + 6)}. "; //mostrando a letra convertida do binario dividido
                                 break;
 
                             case 11:
                                 resultado += "B";
-                                passo += $"({num}){(char)('₀' + 1)}{(char)('₀' + 6)} = (B){(char)('₀' + 1)}{(char)('₀' + 6)}"; //mostrando a letra convertida do binario dividido
+                                passo += $"({num}){(char)('₀' + 1)}{(char)('₀' + 6)} = (B){(char)('₀' + 1)}{(char)('₀' + 6)}. "; //mostrando a letra convertida do binario dividido
                                 break;
 
                             case 12:
                                 resultado += "C";
-                                passo += $"({num}){(char)('₀' + 1)}{(char)('₀' + 6)} = (C){(char)('₀' + 1)}{(char)('₀' + 6)}"; //mostrando a letra convertida do binario dividido
+                                passo += $"({num}){(char)('₀' + 1)}{(char)('₀' + 6)} = (C){(char)('₀' + 1)}{(char)('₀' + 6)}. "; //mostrando a letra convertida do binario dividido
                                 break;
 
                             case 13:
                                 resultado += "D";
-                                passo += $"({num}){(char)('₀' + 1)}{(char)('₀' + 6)} = (D){(char)('₀' + 1)}{(char)('₀' + 6)}"; //mostrando a letra convertida do binario dividido
+                                passo += $"({num}){(char)('₀' + 1)}{(char)('₀' + 6)} = (D){(char)('₀' + 1)}{(char)('₀' + 6)}. "; //mostrando a letra convertida do binario dividido
                                 break;
 
                             case 14:
                                 resultado += "E";
-                                passo += $"({num}){(char)('₀' + 1)}{(char)('₀' + 6)} = (E){(char)('₀' + 1)}{(char)('₀' + 6)}"; //mostrando a letra convertida do binario dividido
+                                passo += $"({num}){(char)('₀' + 1)}{(char)('₀' + 6)} = (E){(char)('₀' + 1)}{(char)('₀' + 6)}. "; //mostrando a letra convertida do binario dividido
                                 break;
 
                             case 15:
                                 resultado += "F";
-                                passo += $"({num}){(char)('₀' + 1)}{(char)('₀' + 6)} = (F){(char)('₀' + 1)}{(char)('₀' + 6)}"; //mostrando a letra convertida do binario dividido
+                                passo += $"({num}){(char)('₀' + 1)}{(char)('₀' + 6)} = (F){(char)('₀' + 1)}{(char)('₀' + 6)}. "; //mostrando a letra convertida do binario dividido
                                 break;
                         }
                     }
@@ -198,6 +198,66 @@
                 passo += $"= ({resultado}){(char)('₀' + 1)}{(char)('₀' + 6)}";
                 txt_resultado.Text = resultado;
                 txt_passo.Text = passo;
+            }
+        }
+
+        private void btn_converter_hexa_Click(object sender, EventArgs e)
+        {
+            if (rbt_decimal_hexa.Checked) //hexa -> decimal
+            {
+                string hexa = txt_hexa.Text; //hexadecimal passado pelo usuário
+                int resultado = 0; //resultado final
+                string passo = $"({hexa}){(char)('₀' + 1)}{(char)('₀' + 6)} = "; //inicio do passo a passo
+
+                for (int i = 0; i < hexa.Length; i++) //para cada bit do hexadecimal
+                {
+                    switch (hexa[i]) //caso o bit seja uma letra, adicionar ao resultado o número correspondente
+                    {
+                        case 'A':
+                            resultado += 10 * (int)Math.Pow(16, hexa.Length - 1 - i); //resultado = bit vezes 16 elevado a posição do bit
+                            passo += $"10.16{ToSuperScript(hexa.Length - 1 - i)} + "; //passo a passo demonstrando a operação acima, utilizando a função ToSuperScript para adicionar o char do número elevado
+                            break;
+
+                        case 'B':
+                            resultado += 11 * (int)Math.Pow(16, hexa.Length - 1 - i); //resultado = bit vezes 16 elevado a posição do bit
+                            passo += $"11.16{ToSuperScript(hexa.Length - 1 - i)} + ";
+                            break;
+
+                        case 'C':
+                            resultado += 12 * (int)Math.Pow(16, hexa.Length - 1 - i); //resultado = bit vezes 16 elevado a posição do bit
+                            passo += $"12.16{ToSuperScript(hexa.Length - 1 - i)} + ";
+                            break;
+
+                        case 'D':
+                            resultado += 13 * (int)Math.Pow(16, hexa.Length - 1 - i); //resultado = bit vezes 16 elevado a posição do bit
+                            passo += $"13.16{ToSuperScript(hexa.Length - 1 - i)} + ";
+                            break;
+
+                        case 'E':
+                            resultado += 14 * (int)Math.Pow(16, hexa.Length - 1 - i); //resultado = bit vezes 16 elevado a posição do bit
+                            passo += $"14.16{ToSuperScript(hexa.Length - 1 - i)} + ";
+                            break;
+
+                        case 'F':
+                            resultado += 15 * (int)Math.Pow(16, hexa.Length - 1 - i); //resultado = bit vezes 16 elevado a posição do bit
+                            passo += $"15.16{ToSuperScript(hexa.Length - 1 - i)} + ";
+                            break;
+
+                        default:
+                            resultado += int.Parse(hexa[i].ToString()) * (int)Math.Pow(16, hexa.Length - 1 - i); //resultado = bit vezes 16 elevado a posição do bit
+                            passo += $"{hexa[i]}.16{ToSuperScript(hexa.Length - 1 - i)} + "; //passo a passo demonstrando a operação acima, utilizando a função ToSuperScript para adicionar o char do número elevado
+                            break;
+                    }
+                }
+
+                passo += $"= ({resultado}){(char)('₀' + 1)}{(char)('₀' + 0)}"; //fim do passo a passo
+
+                txt_resultado.Text = resultado.ToString();
+                txt_passo.Text = passo;
+            }
+            else if (rbt_binario_hexa.Checked) //hexa -> binario
+            {
+
             }
         }
     }
