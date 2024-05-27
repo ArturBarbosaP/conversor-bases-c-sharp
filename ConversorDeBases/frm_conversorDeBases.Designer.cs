@@ -30,9 +30,7 @@
         {
             rbt_hexa_dec = new RadioButton();
             rbt_binario_dec = new RadioButton();
-            txt_decimal = new TextBox();
             btn_converter_decimal = new Button();
-            txt_passo = new TextBox();
             txt_resultado = new TextBox();
             rbt_decimal_bin = new RadioButton();
             txt_binario = new TextBox();
@@ -46,9 +44,12 @@
             txt_hexa = new TextBox();
             btn_converter_hexa = new Button();
             btn_calculadora = new Button();
+            ltx_passo = new ListBox();
+            txt_decimal = new NumericUpDown();
             panel_decimal.SuspendLayout();
             panel_binario.SuspendLayout();
             panel_hexa.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)txt_decimal).BeginInit();
             SuspendLayout();
             // 
             // rbt_hexa_dec
@@ -73,14 +74,6 @@
             rbt_binario_dec.Text = "Binário";
             rbt_binario_dec.UseVisualStyleBackColor = true;
             // 
-            // txt_decimal
-            // 
-            txt_decimal.Location = new Point(26, 72);
-            txt_decimal.Name = "txt_decimal";
-            txt_decimal.PlaceholderText = "Base Decimal";
-            txt_decimal.Size = new Size(212, 23);
-            txt_decimal.TabIndex = 2;
-            // 
             // btn_converter_decimal
             // 
             btn_converter_decimal.Location = new Point(26, 101);
@@ -91,22 +84,13 @@
             btn_converter_decimal.UseVisualStyleBackColor = true;
             btn_converter_decimal.Click += btn_converter_decimal_Click;
             // 
-            // txt_passo
-            // 
-            txt_passo.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txt_passo.Location = new Point(335, 72);
-            txt_passo.Multiline = true;
-            txt_passo.Name = "txt_passo";
-            txt_passo.ReadOnly = true;
-            txt_passo.Size = new Size(439, 355);
-            txt_passo.TabIndex = 11;
-            // 
             // txt_resultado
             // 
+            txt_resultado.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txt_resultado.Location = new Point(335, 27);
             txt_resultado.Name = "txt_resultado";
             txt_resultado.ReadOnly = true;
-            txt_resultado.Size = new Size(439, 23);
+            txt_resultado.Size = new Size(439, 39);
             txt_resultado.TabIndex = 0;
             // 
             // rbt_decimal_bin
@@ -226,11 +210,32 @@
             btn_calculadora.UseVisualStyleBackColor = true;
             btn_calculadora.Click += btn_calculadora_Click;
             // 
+            // ltx_passo
+            // 
+            ltx_passo.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ltx_passo.FormattingEnabled = true;
+            ltx_passo.ItemHeight = 32;
+            ltx_passo.Location = new Point(335, 72);
+            ltx_passo.Name = "ltx_passo";
+            ltx_passo.SelectionMode = SelectionMode.None;
+            ltx_passo.Size = new Size(439, 356);
+            ltx_passo.TabIndex = 12;
+            // 
+            // txt_decimal
+            // 
+            txt_decimal.Location = new Point(26, 72);
+            txt_decimal.Maximum = new decimal(new int[] { 5000, 0, 0, 0 });
+            txt_decimal.Name = "txt_decimal";
+            txt_decimal.Size = new Size(212, 23);
+            txt_decimal.TabIndex = 13;
+            // 
             // frm_conversorDeBases
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(txt_decimal);
+            Controls.Add(ltx_passo);
             Controls.Add(btn_calculadora);
             Controls.Add(btn_converter_hexa);
             Controls.Add(txt_hexa);
@@ -240,9 +245,7 @@
             Controls.Add(panel_decimal);
             Controls.Add(txt_binario);
             Controls.Add(txt_resultado);
-            Controls.Add(txt_passo);
             Controls.Add(btn_converter_decimal);
-            Controls.Add(txt_decimal);
             Name = "frm_conversorDeBases";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Conversor De Bases";
@@ -252,6 +255,7 @@
             panel_binario.PerformLayout();
             panel_hexa.ResumeLayout(false);
             panel_hexa.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)txt_decimal).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -260,9 +264,7 @@
 
         private RadioButton rbt_hexa_dec;
         private RadioButton rbt_binario_dec;
-        private TextBox txt_decimal;
         private Button btn_converter_decimal;
-        private TextBox txt_passo;
         private TextBox txt_resultado;
         private RadioButton rbt_decimal_bin;
         private TextBox txt_binario;
@@ -276,5 +278,7 @@
         private TextBox txt_hexa;
         private Button btn_converter_hexa;
         private Button btn_calculadora;
+        private ListBox ltx_passo;
+        private NumericUpDown txt_decimal;
     }
 }
