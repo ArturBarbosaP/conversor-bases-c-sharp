@@ -28,29 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btn_somar = new Button();
             txt_num1 = new TextBox();
             panel_rbts = new Panel();
             rbt_hexa = new RadioButton();
             rbt_binario = new RadioButton();
             rbt_decimal = new RadioButton();
             txt_num2 = new TextBox();
-            btn_sub = new Button();
-            btn_multi = new Button();
             txt_resultado = new TextBox();
             btn_voltar = new Button();
+            btn_calcular = new Button();
+            cbx_operacao = new ComboBox();
             panel_rbts.SuspendLayout();
             SuspendLayout();
-            // 
-            // btn_somar
-            // 
-            btn_somar.Location = new Point(27, 192);
-            btn_somar.Name = "btn_somar";
-            btn_somar.Size = new Size(349, 26);
-            btn_somar.TabIndex = 21;
-            btn_somar.Text = "Somar";
-            btn_somar.UseVisualStyleBackColor = true;
-            btn_somar.Click += btn_somar_Click;
             // 
             // txt_num1
             // 
@@ -110,37 +99,18 @@
             txt_num2.Size = new Size(349, 23);
             txt_num2.TabIndex = 22;
             // 
-            // btn_sub
-            // 
-            btn_sub.Location = new Point(27, 224);
-            btn_sub.Name = "btn_sub";
-            btn_sub.Size = new Size(349, 26);
-            btn_sub.TabIndex = 23;
-            btn_sub.Text = "Subtrair";
-            btn_sub.UseVisualStyleBackColor = true;
-            btn_sub.Click += btn_sub_Click;
-            // 
-            // btn_multi
-            // 
-            btn_multi.Location = new Point(27, 256);
-            btn_multi.Name = "btn_multi";
-            btn_multi.Size = new Size(349, 26);
-            btn_multi.TabIndex = 24;
-            btn_multi.Text = "Multiplicar";
-            btn_multi.UseVisualStyleBackColor = true;
-            btn_multi.Click += btn_multi_Click;
-            // 
             // txt_resultado
             // 
-            txt_resultado.Location = new Point(424, 152);
+            txt_resultado.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
+            txt_resultado.Location = new Point(439, 133);
             txt_resultado.Name = "txt_resultado";
             txt_resultado.ReadOnly = true;
-            txt_resultado.Size = new Size(349, 23);
+            txt_resultado.Size = new Size(349, 39);
             txt_resultado.TabIndex = 25;
             // 
             // btn_voltar
             // 
-            btn_voltar.Location = new Point(27, 346);
+            btn_voltar.Location = new Point(27, 213);
             btn_voltar.Name = "btn_voltar";
             btn_voltar.Size = new Size(349, 26);
             btn_voltar.TabIndex = 26;
@@ -148,22 +118,42 @@
             btn_voltar.UseVisualStyleBackColor = true;
             btn_voltar.Click += btn_voltar_Click;
             // 
+            // btn_calcular
+            // 
+            btn_calcular.Location = new Point(27, 181);
+            btn_calcular.Name = "btn_calcular";
+            btn_calcular.Size = new Size(349, 26);
+            btn_calcular.TabIndex = 27;
+            btn_calcular.Text = "Calcular";
+            btn_calcular.UseVisualStyleBackColor = true;
+            btn_calcular.Click += btn_calcular_Click;
+            // 
+            // cbx_operacao
+            // 
+            cbx_operacao.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbx_operacao.FormattingEnabled = true;
+            cbx_operacao.Items.AddRange(new object[] { "+", "-", "*" });
+            cbx_operacao.Location = new Point(382, 141);
+            cbx_operacao.Name = "cbx_operacao";
+            cbx_operacao.Size = new Size(50, 23);
+            cbx_operacao.TabIndex = 28;
+            // 
             // frm_calculadoraDeBases
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(cbx_operacao);
+            Controls.Add(btn_calcular);
             Controls.Add(btn_voltar);
             Controls.Add(txt_resultado);
-            Controls.Add(btn_multi);
-            Controls.Add(btn_sub);
             Controls.Add(txt_num2);
-            Controls.Add(btn_somar);
             Controls.Add(txt_num1);
             Controls.Add(panel_rbts);
             Name = "frm_calculadoraDeBases";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Calculadora de Bases";
+            Load += frm_calculadoraDeBases_Load;
             panel_rbts.ResumeLayout(false);
             panel_rbts.PerformLayout();
             ResumeLayout(false);
@@ -171,17 +161,15 @@
         }
 
         #endregion
-
-        private Button btn_somar;
         private TextBox txt_num1;
         private Panel panel_rbts;
         private RadioButton rbt_binario;
         private RadioButton rbt_decimal;
         private RadioButton rbt_hexa;
         private TextBox txt_num2;
-        private Button btn_sub;
-        private Button btn_multi;
         private TextBox txt_resultado;
         private Button btn_voltar;
+        private Button btn_calcular;
+        private ComboBox cbx_operacao;
     }
 }
