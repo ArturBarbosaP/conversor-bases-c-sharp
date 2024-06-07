@@ -28,66 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            rbt_hexa_dec = new RadioButton();
-            rbt_binario_dec = new RadioButton();
-            btn_converter_decimal = new Button();
             txt_resultado = new TextBox();
             rbt_decimal_bin = new RadioButton();
-            txt_binario = new TextBox();
-            panel_decimal = new Panel();
-            panel_binario = new Panel();
+            txt_num = new TextBox();
+            panel_baseNumero = new Panel();
+            radioButton1 = new RadioButton();
             rbt_hexa_bin = new RadioButton();
-            btn_converter_binario = new Button();
-            panel_hexa = new Panel();
-            rbt_binario_hexa = new RadioButton();
-            rbt_decimal_hexa = new RadioButton();
-            txt_hexa = new TextBox();
-            btn_converter_hexa = new Button();
             btn_calculadora = new Button();
             ltx_passo = new ListBox();
-            txt_decimal = new NumericUpDown();
-            panel_decimal.SuspendLayout();
-            panel_binario.SuspendLayout();
-            panel_hexa.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)txt_decimal).BeginInit();
+            label1 = new Label();
+            label2 = new Label();
+            panel_baseFinal = new Panel();
+            radioButton2 = new RadioButton();
+            radioButton3 = new RadioButton();
+            radioButton4 = new RadioButton();
+            btn_converter = new Button();
+            panel_baseNumero.SuspendLayout();
+            panel_baseFinal.SuspendLayout();
             SuspendLayout();
-            // 
-            // rbt_hexa_dec
-            // 
-            rbt_hexa_dec.AutoSize = true;
-            rbt_hexa_dec.Location = new Point(107, 10);
-            rbt_hexa_dec.Name = "rbt_hexa_dec";
-            rbt_hexa_dec.Size = new Size(94, 19);
-            rbt_hexa_dec.TabIndex = 1;
-            rbt_hexa_dec.Text = "Hexadecimal";
-            rbt_hexa_dec.UseVisualStyleBackColor = true;
-            // 
-            // rbt_binario_dec
-            // 
-            rbt_binario_dec.AutoSize = true;
-            rbt_binario_dec.Checked = true;
-            rbt_binario_dec.Location = new Point(12, 10);
-            rbt_binario_dec.Name = "rbt_binario_dec";
-            rbt_binario_dec.Size = new Size(62, 19);
-            rbt_binario_dec.TabIndex = 0;
-            rbt_binario_dec.TabStop = true;
-            rbt_binario_dec.Text = "Binário";
-            rbt_binario_dec.UseVisualStyleBackColor = true;
-            // 
-            // btn_converter_decimal
-            // 
-            btn_converter_decimal.Location = new Point(26, 101);
-            btn_converter_decimal.Name = "btn_converter_decimal";
-            btn_converter_decimal.Size = new Size(212, 26);
-            btn_converter_decimal.TabIndex = 3;
-            btn_converter_decimal.Text = "Converter";
-            btn_converter_decimal.UseVisualStyleBackColor = true;
-            btn_converter_decimal.Click += btn_converter_decimal_Click;
             // 
             // txt_resultado
             // 
+            txt_resultado.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             txt_resultado.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txt_resultado.Location = new Point(335, 27);
+            txt_resultado.Location = new Point(346, 25);
             txt_resultado.Name = "txt_resultado";
             txt_resultado.ReadOnly = true;
             txt_resultado.Size = new Size(439, 39);
@@ -105,106 +69,50 @@
             rbt_decimal_bin.Text = "Decimal";
             rbt_decimal_bin.UseVisualStyleBackColor = true;
             // 
-            // txt_binario
+            // txt_num
             // 
-            txt_binario.Location = new Point(26, 196);
-            txt_binario.Name = "txt_binario";
-            txt_binario.PlaceholderText = "Base Binária";
-            txt_binario.Size = new Size(212, 23);
-            txt_binario.TabIndex = 5;
+            txt_num.Location = new Point(16, 115);
+            txt_num.Name = "txt_num";
+            txt_num.PlaceholderText = "Número";
+            txt_num.Size = new Size(303, 23);
+            txt_num.TabIndex = 5;
             // 
-            // panel_decimal
+            // panel_baseNumero
             // 
-            panel_decimal.Controls.Add(rbt_binario_dec);
-            panel_decimal.Controls.Add(rbt_hexa_dec);
-            panel_decimal.Location = new Point(26, 27);
-            panel_decimal.Name = "panel_decimal";
-            panel_decimal.Size = new Size(212, 39);
-            panel_decimal.TabIndex = 1;
+            panel_baseNumero.Controls.Add(radioButton1);
+            panel_baseNumero.Controls.Add(rbt_hexa_bin);
+            panel_baseNumero.Controls.Add(rbt_decimal_bin);
+            panel_baseNumero.Location = new Point(16, 70);
+            panel_baseNumero.Name = "panel_baseNumero";
+            panel_baseNumero.Size = new Size(303, 39);
+            panel_baseNumero.TabIndex = 4;
             // 
-            // panel_binario
+            // radioButton1
             // 
-            panel_binario.Controls.Add(rbt_hexa_bin);
-            panel_binario.Controls.Add(rbt_decimal_bin);
-            panel_binario.Location = new Point(26, 151);
-            panel_binario.Name = "panel_binario";
-            panel_binario.Size = new Size(212, 39);
-            panel_binario.TabIndex = 4;
+            radioButton1.AutoSize = true;
+            radioButton1.Location = new Point(107, 10);
+            radioButton1.Name = "radioButton1";
+            radioButton1.Size = new Size(62, 19);
+            radioButton1.TabIndex = 2;
+            radioButton1.Text = "Binário";
+            radioButton1.UseVisualStyleBackColor = true;
             // 
             // rbt_hexa_bin
             // 
             rbt_hexa_bin.AutoSize = true;
-            rbt_hexa_bin.Location = new Point(106, 10);
+            rbt_hexa_bin.Location = new Point(195, 10);
             rbt_hexa_bin.Name = "rbt_hexa_bin";
             rbt_hexa_bin.Size = new Size(94, 19);
             rbt_hexa_bin.TabIndex = 1;
             rbt_hexa_bin.Text = "Hexadecimal";
             rbt_hexa_bin.UseVisualStyleBackColor = true;
             // 
-            // btn_converter_binario
-            // 
-            btn_converter_binario.Location = new Point(26, 225);
-            btn_converter_binario.Name = "btn_converter_binario";
-            btn_converter_binario.Size = new Size(212, 26);
-            btn_converter_binario.TabIndex = 6;
-            btn_converter_binario.Text = "Converter";
-            btn_converter_binario.UseVisualStyleBackColor = true;
-            btn_converter_binario.Click += btn_converter_binario_Click;
-            // 
-            // panel_hexa
-            // 
-            panel_hexa.Controls.Add(rbt_binario_hexa);
-            panel_hexa.Controls.Add(rbt_decimal_hexa);
-            panel_hexa.Location = new Point(26, 275);
-            panel_hexa.Name = "panel_hexa";
-            panel_hexa.Size = new Size(212, 39);
-            panel_hexa.TabIndex = 7;
-            // 
-            // rbt_binario_hexa
-            // 
-            rbt_binario_hexa.AutoSize = true;
-            rbt_binario_hexa.Location = new Point(135, 10);
-            rbt_binario_hexa.Name = "rbt_binario_hexa";
-            rbt_binario_hexa.Size = new Size(62, 19);
-            rbt_binario_hexa.TabIndex = 1;
-            rbt_binario_hexa.Text = "Binário";
-            rbt_binario_hexa.UseVisualStyleBackColor = true;
-            // 
-            // rbt_decimal_hexa
-            // 
-            rbt_decimal_hexa.AutoSize = true;
-            rbt_decimal_hexa.Checked = true;
-            rbt_decimal_hexa.Location = new Point(16, 10);
-            rbt_decimal_hexa.Name = "rbt_decimal_hexa";
-            rbt_decimal_hexa.Size = new Size(68, 19);
-            rbt_decimal_hexa.TabIndex = 0;
-            rbt_decimal_hexa.TabStop = true;
-            rbt_decimal_hexa.Text = "Decimal";
-            rbt_decimal_hexa.UseVisualStyleBackColor = true;
-            // 
-            // txt_hexa
-            // 
-            txt_hexa.Location = new Point(26, 320);
-            txt_hexa.Name = "txt_hexa";
-            txt_hexa.PlaceholderText = "Base Hexadecimal";
-            txt_hexa.Size = new Size(212, 23);
-            txt_hexa.TabIndex = 8;
-            // 
-            // btn_converter_hexa
-            // 
-            btn_converter_hexa.Location = new Point(26, 349);
-            btn_converter_hexa.Name = "btn_converter_hexa";
-            btn_converter_hexa.Size = new Size(212, 26);
-            btn_converter_hexa.TabIndex = 9;
-            btn_converter_hexa.Text = "Converter";
-            btn_converter_hexa.UseVisualStyleBackColor = true;
-            btn_converter_hexa.Click += btn_converter_hexa_Click;
-            // 
             // btn_calculadora
             // 
-            btn_calculadora.Location = new Point(26, 401);
+            btn_calculadora.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btn_calculadora.Location = new Point(12, 400);
             btn_calculadora.Name = "btn_calculadora";
-            btn_calculadora.Size = new Size(212, 26);
+            btn_calculadora.Size = new Size(303, 26);
             btn_calculadora.TabIndex = 10;
             btn_calculadora.Text = "Calculadora";
             btn_calculadora.UseVisualStyleBackColor = true;
@@ -212,73 +120,128 @@
             // 
             // ltx_passo
             // 
+            ltx_passo.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             ltx_passo.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             ltx_passo.FormattingEnabled = true;
+            ltx_passo.HorizontalScrollbar = true;
             ltx_passo.ItemHeight = 32;
-            ltx_passo.Location = new Point(335, 72);
+            ltx_passo.Location = new Point(346, 70);
             ltx_passo.Name = "ltx_passo";
             ltx_passo.SelectionMode = SelectionMode.None;
             ltx_passo.Size = new Size(439, 356);
             ltx_passo.TabIndex = 12;
             // 
-            // txt_decimal
+            // label1
             // 
-            txt_decimal.Location = new Point(26, 72);
-            txt_decimal.Maximum = new decimal(new int[] { 5000, 0, 0, 0 });
-            txt_decimal.Name = "txt_decimal";
-            txt_decimal.Size = new Size(212, 23);
-            txt_decimal.TabIndex = 13;
+            label1.AutoSize = true;
+            label1.Location = new Point(16, 49);
+            label1.Name = "label1";
+            label1.Size = new Size(147, 15);
+            label1.TabIndex = 14;
+            label1.Text = "Converter número da base";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(16, 141);
+            label2.Name = "label2";
+            label2.Size = new Size(112, 15);
+            label2.TabIndex = 15;
+            label2.Text = "Converter para base";
+            // 
+            // panel_baseFinal
+            // 
+            panel_baseFinal.Controls.Add(radioButton2);
+            panel_baseFinal.Controls.Add(radioButton3);
+            panel_baseFinal.Controls.Add(radioButton4);
+            panel_baseFinal.Location = new Point(16, 159);
+            panel_baseFinal.Name = "panel_baseFinal";
+            panel_baseFinal.Size = new Size(303, 39);
+            panel_baseFinal.TabIndex = 5;
+            // 
+            // radioButton2
+            // 
+            radioButton2.AutoSize = true;
+            radioButton2.Location = new Point(107, 10);
+            radioButton2.Name = "radioButton2";
+            radioButton2.Size = new Size(62, 19);
+            radioButton2.TabIndex = 2;
+            radioButton2.Text = "Binário";
+            radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton3
+            // 
+            radioButton3.AutoSize = true;
+            radioButton3.Location = new Point(195, 10);
+            radioButton3.Name = "radioButton3";
+            radioButton3.Size = new Size(94, 19);
+            radioButton3.TabIndex = 1;
+            radioButton3.Text = "Hexadecimal";
+            radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // radioButton4
+            // 
+            radioButton4.AutoSize = true;
+            radioButton4.Checked = true;
+            radioButton4.Location = new Point(13, 10);
+            radioButton4.Name = "radioButton4";
+            radioButton4.Size = new Size(68, 19);
+            radioButton4.TabIndex = 0;
+            radioButton4.TabStop = true;
+            radioButton4.Text = "Decimal";
+            radioButton4.UseVisualStyleBackColor = true;
+            // 
+            // btn_converter
+            // 
+            btn_converter.Location = new Point(16, 204);
+            btn_converter.Name = "btn_converter";
+            btn_converter.Size = new Size(303, 26);
+            btn_converter.TabIndex = 16;
+            btn_converter.Text = "Converter";
+            btn_converter.UseVisualStyleBackColor = true;
+            btn_converter.Click += btn_converter_Click;
             // 
             // frm_conversorDeBases
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(txt_decimal);
-            Controls.Add(ltx_passo);
+            Controls.Add(panel_baseFinal);
+            Controls.Add(btn_converter);
+            Controls.Add(label2);
+            Controls.Add(label1);
             Controls.Add(btn_calculadora);
-            Controls.Add(btn_converter_hexa);
-            Controls.Add(txt_hexa);
-            Controls.Add(panel_hexa);
-            Controls.Add(btn_converter_binario);
-            Controls.Add(panel_binario);
-            Controls.Add(panel_decimal);
-            Controls.Add(txt_binario);
+            Controls.Add(panel_baseNumero);
+            Controls.Add(txt_num);
             Controls.Add(txt_resultado);
-            Controls.Add(btn_converter_decimal);
+            Controls.Add(ltx_passo);
+            MinimumSize = new Size(816, 489);
             Name = "frm_conversorDeBases";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Conversor De Bases";
-            panel_decimal.ResumeLayout(false);
-            panel_decimal.PerformLayout();
-            panel_binario.ResumeLayout(false);
-            panel_binario.PerformLayout();
-            panel_hexa.ResumeLayout(false);
-            panel_hexa.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)txt_decimal).EndInit();
+            panel_baseNumero.ResumeLayout(false);
+            panel_baseNumero.PerformLayout();
+            panel_baseFinal.ResumeLayout(false);
+            panel_baseFinal.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private RadioButton rbt_hexa_dec;
-        private RadioButton rbt_binario_dec;
-        private Button btn_converter_decimal;
         private TextBox txt_resultado;
         private RadioButton rbt_decimal_bin;
-        private TextBox txt_binario;
-        private Panel panel_decimal;
-        private Panel panel_binario;
+        private TextBox txt_num;
+        private Panel panel_baseNumero;
         private RadioButton rbt_hexa_bin;
-        private Button btn_converter_binario;
-        private Panel panel_hexa;
-        private RadioButton rbt_binario_hexa;
-        private RadioButton rbt_decimal_hexa;
-        private TextBox txt_hexa;
-        private Button btn_converter_hexa;
         private Button btn_calculadora;
         private ListBox ltx_passo;
-        private NumericUpDown txt_decimal;
+        private RadioButton radioButton1;
+        private Label label1;
+        private Label label2;
+        private Panel panel_baseFinal;
+        private RadioButton radioButton2;
+        private RadioButton radioButton3;
+        private RadioButton radioButton4;
+        private Button btn_converter;
     }
 }
