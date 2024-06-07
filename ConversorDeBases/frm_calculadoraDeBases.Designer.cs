@@ -38,12 +38,13 @@
             btn_voltar = new Button();
             btn_calcular = new Button();
             cbx_operacao = new ComboBox();
+            lbl_base = new Label();
             panel_rbts.SuspendLayout();
             SuspendLayout();
             // 
             // txt_num1
             // 
-            txt_num1.Location = new Point(27, 123);
+            txt_num1.Location = new Point(20, 190);
             txt_num1.Name = "txt_num1";
             txt_num1.PlaceholderText = "Número 1";
             txt_num1.Size = new Size(349, 23);
@@ -54,7 +55,7 @@
             panel_rbts.Controls.Add(rbt_hexa);
             panel_rbts.Controls.Add(rbt_binario);
             panel_rbts.Controls.Add(rbt_decimal);
-            panel_rbts.Location = new Point(27, 78);
+            panel_rbts.Location = new Point(20, 145);
             panel_rbts.Name = "panel_rbts";
             panel_rbts.Size = new Size(349, 39);
             panel_rbts.TabIndex = 19;
@@ -93,7 +94,7 @@
             // 
             // txt_num2
             // 
-            txt_num2.Location = new Point(27, 152);
+            txt_num2.Location = new Point(20, 219);
             txt_num2.Name = "txt_num2";
             txt_num2.PlaceholderText = "Número 2";
             txt_num2.Size = new Size(349, 23);
@@ -101,8 +102,9 @@
             // 
             // txt_resultado
             // 
+            txt_resultado.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             txt_resultado.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
-            txt_resultado.Location = new Point(439, 133);
+            txt_resultado.Location = new Point(432, 200);
             txt_resultado.Name = "txt_resultado";
             txt_resultado.ReadOnly = true;
             txt_resultado.Size = new Size(349, 39);
@@ -110,7 +112,7 @@
             // 
             // btn_voltar
             // 
-            btn_voltar.Location = new Point(27, 213);
+            btn_voltar.Location = new Point(20, 280);
             btn_voltar.Name = "btn_voltar";
             btn_voltar.Size = new Size(349, 26);
             btn_voltar.TabIndex = 26;
@@ -120,7 +122,7 @@
             // 
             // btn_calcular
             // 
-            btn_calcular.Location = new Point(27, 181);
+            btn_calcular.Location = new Point(20, 248);
             btn_calcular.Name = "btn_calcular";
             btn_calcular.Size = new Size(349, 26);
             btn_calcular.TabIndex = 27;
@@ -131,18 +133,29 @@
             // cbx_operacao
             // 
             cbx_operacao.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbx_operacao.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cbx_operacao.FormattingEnabled = true;
             cbx_operacao.Items.AddRange(new object[] { "+", "-", "*" });
-            cbx_operacao.Location = new Point(382, 141);
+            cbx_operacao.Location = new Point(376, 199);
             cbx_operacao.Name = "cbx_operacao";
-            cbx_operacao.Size = new Size(50, 23);
+            cbx_operacao.Size = new Size(50, 40);
             cbx_operacao.TabIndex = 28;
+            // 
+            // lbl_base
+            // 
+            lbl_base.AutoSize = true;
+            lbl_base.Location = new Point(20, 127);
+            lbl_base.Name = "lbl_base";
+            lbl_base.Size = new Size(128, 15);
+            lbl_base.TabIndex = 29;
+            lbl_base.Text = "O número está na base";
             // 
             // frm_calculadoraDeBases
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(lbl_base);
             Controls.Add(cbx_operacao);
             Controls.Add(btn_calcular);
             Controls.Add(btn_voltar);
@@ -150,6 +163,7 @@
             Controls.Add(txt_num2);
             Controls.Add(txt_num1);
             Controls.Add(panel_rbts);
+            MinimumSize = new Size(816, 489);
             Name = "frm_calculadoraDeBases";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Calculadora de Bases";
@@ -171,5 +185,6 @@
         private Button btn_voltar;
         private Button btn_calcular;
         private ComboBox cbx_operacao;
+        private Label lbl_base;
     }
 }
